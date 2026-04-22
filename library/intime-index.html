@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" src="https://github.com/thereealJD/thereealJD-InTime/blob/main/intime-icon.png">
+    <title>InTime</title>
+    <script src="https://github.com/thereealJD/thereealJD-InTime/blob/main/library/intime-scripts.js"></script>
+    <link rel="stylesheet" href="https://github.com/thereealJD/thereealJD-InTime/blob/main/library/intime-styles.css">
+</head>
+<body>
+    <div class="focus-sessions-area">
+        <div class="pilled_option pilled_option-pom_ana">
+            <button class="pilled-option-btn focused_pilled-option-btn pilled-op-pom" onclick="pombtn()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target-icon lucide-target"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+                <span>Pomodoro</span>
+            </button>
+            <button class="pilled-option-btn pilled-op-ana" onclick="anabtn()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                <span>Focus Analytics</span>
+            </button>
+        </div>
+        <div class="pom__main-area">
+            <!-- -=====Pomodoro=====- -->
+            <div class="pomodoro">
 
+            </div>
+
+            <!-- -=====Analytics=====- -->
+            <div class="analytics">
+
+                <!-- -====User Bests====- -->
+                <div class="user-pb">
+
+                    <!-- -===Total Sesssion===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5e5e5e" stroke-linecap="round" stroke-linejoin="round" id="Codesandbox--Streamline-Lucide" height="24" width="24"><desc>Codesandbox Streamline Icon: https://streamlinehq.com</desc><path d="M21 16V8a2 2 0 0 0 -1 -1.73l-7 -4a2 2 0 0 0 -2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7 -4A2 2 0 0 0 21 16z" stroke-width="0.5"></path><path d="m7.5 4.21 4.5 2.6 4.5 -2.6" stroke-width="0.5"></path><path d="m7.5 19.79 0 -5.19L3 12" stroke-width="0.5"></path><path d="m21 12 -4.5 2.6 0 5.19" stroke-width="0.5"></path><path d="M3.27 6.96 12 12.01l8.73 -5.05" stroke-width="0.5"></path><path d="M12 22.08 12 12" stroke-width="0.5"></path></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Total Sesssions</span>
+                                </div>
+                                <div class="user-pb__card-count total-sessions">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Average Session Duration===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Avg Session Duration</span>
+                                </div>
+                                <div class="user-pb__card-count avg-session-duration">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Average Hours per Study Day===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Avg Hours per Study Day</span>
+                                </div>
+                                <div class="user-pb__card-count avg-hour-day">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Average Hours per Week===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days-icon lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Avg Hours per Week</span>
+                                </div>
+                                <div class="user-pb__card-count avg-hour-week">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Longest Session===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Longest Session</span>
+                                </div>
+                                <div class="user-pb__card-count longest-session">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Best Day===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-icon lucide-calendar"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Best Day</span>
+                                </div>
+                                <div class="user-pb__card-count best-day">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- -===Best Week===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendars-icon lucide-calendars"><path d="M12 2v2"/><path d="M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2"/><path d="M18 2v2"/><path d="M2 13h2"/><path d="M8 8h14"/><rect x="8" y="3" width="14" height="14" rx="2"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Best Week</span>
+                                </div>
+                                <div class="user-pb__card-count best-week">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- -===Longest Streak===- -->
+                    <div class="user-pb__card">
+                        <div class="user-pb__card-inside">
+                            <div class="user-pb__card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame-icon lucide-flame"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
+                            </div>
+                            <div class="user-pb__card-details">
+                                <div class="user-pb__card-title">
+                                    <span>Longest Streak</span>
+                                </div>
+                                <div class="user-pb__card-count longest-streak">
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -====User Analytics====- -->
+                <div class="user-an">
+                    
+                    <!-- -===Heatmap===- -->
+                    <div class="user-an__card">
+                        <span>Study Heatmap</span>
+                    </div>
+                    <div id="cal-heatmap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
